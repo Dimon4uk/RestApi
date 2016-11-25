@@ -1,0 +1,4 @@
+INSERT INTO PUBLIC.USER (LOGIN, PASSWORD, EMAIL, ROLE, ENABLED, FIRST_NAME, LAST_NAME, GENDER, PHONE_NUMBER) VALUES ('11111', '123', 'drytrok@test.test', 'USER', true, null, null, null, null);
+INSERT INTO PUBLIC.USER (LOGIN, PASSWORD, EMAIL, ROLE, ENABLED, FIRST_NAME, LAST_NAME, GENDER, PHONE_NUMBER) VALUES ('dmytrok_test1', '123', 'drytrok@test.test', 'USER', true, null, null, null, null);
+INSERT INTO PUBLIC.USER (LOGIN, PASSWORD, EMAIL, ROLE, ENABLED, FIRST_NAME, LAST_NAME, GENDER, PHONE_NUMBER) VALUES ('test2', '123', 'test2@test.test', 'USER', true, null, null, null, null);
+INSERT INTO PUBLIC.USER (LOGIN, PASSWORD, EMAIL, ROLE, ENABLED, FIRST_NAME, LAST_NAME, GENDER, PHONE_NUMBER) VALUES ('dmytrok', '123', 'test@devcom.com', 'ADMIN', true, null, null, null, null);

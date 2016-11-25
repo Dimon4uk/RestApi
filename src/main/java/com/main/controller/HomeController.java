@@ -3,6 +3,8 @@ package com.main.controller;
 import com.main.model.User;
 import com.main.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.security.PermitAll;
@@ -25,7 +27,7 @@ public class HomeController {
     public String create() {
     User user = new User();
         user.setEmail("drytrok@test.test");
-        user.setLogin("dmytrok");
+        user.setDisplayName("dmytrok");
         user.setPassword("123");
 
         try {
@@ -36,7 +38,7 @@ public class HomeController {
         }
     }
 
-
+    @CrossOrigin(allowCredentials = "false")
     @RequestMapping(value = "/users", produces ="application/json")
     public Iterable<User> getUsers() {
 

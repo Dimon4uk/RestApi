@@ -24,22 +24,69 @@ public class User {
     private String password;
 
     @Column(name="enabled")
-    private boolean enabled;
+    private boolean enabled = true;
 
     @Column(name="login")
-    private String login;
+    private String displayName;
 
     @Column(name="role")
-    private String role;
+    private String role = "USER";
 
+    @Column(name="first_name")
+    private String firstName;
 
+    @Column(name="last_name")
+    private String lastName;
+
+    @Column(name="gender")
+    private String gender;
+
+    @Column(name="phone_number")
+    private String phoneNumber;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public User() {}
 
-    public User(String email, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
-        this.username = email;
-        this.password = password;
-    }
+
 
     public String getRole() {
         return role;
@@ -81,11 +128,11 @@ public class User {
         this.password = password;
     }
 
-    public String getLogin() {
-        return login;
+    public String getDisplayName() {
+        return displayName;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 }
